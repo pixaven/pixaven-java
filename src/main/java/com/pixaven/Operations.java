@@ -1,6 +1,7 @@
 package com.pixaven;
 
 public interface Operations<T extends Operations> {
+    T flip(OperationConfiguration configuration);
     T resize(OperationConfiguration configuration);
     T scale(OperationConfiguration configuration);
     T crop(OperationConfiguration configuration);

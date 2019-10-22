@@ -9,6 +9,12 @@ public abstract class BaseOperations<T extends Operations> implements Operations
     protected abstract Dynamic metadata();
 
     @Override
+    public T flip(OperationConfiguration configuration) {
+        metadata().set("flip",configuration.asMap());
+        return (T) this;
+    }
+
+    @Override
     public T resize(OperationConfiguration configuration) {
         metadata().set("resize",configuration.asMap());
         return (T) this;
